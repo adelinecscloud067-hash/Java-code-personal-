@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CompareNumbers {
+public class compare_numbers {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("输入要比较的三个数字：");
