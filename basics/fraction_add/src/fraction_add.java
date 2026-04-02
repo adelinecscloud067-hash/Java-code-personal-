@@ -1,6 +1,5 @@
 public class fraction_add {
     public static void main(String[] args) {
-        // 1. 使用 for 循环
         double sumFor = 1.0;
         double fact = 1.0;
         for (int n = 2; n <= 20; n++) {
