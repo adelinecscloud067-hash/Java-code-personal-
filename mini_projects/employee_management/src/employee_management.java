@@ -7,6 +7,15 @@ class Employee{
     private String department;
     static int attendanceCount;
 
+    public Employee(int id, String name,int age, String position, String department) {
+        this.id=id;
+        this.name=name;
+        this.age=age;
+        this.position=position;
+        this.department=department;
+    }
+
+
     public Employee(int id, String name){
         this.id=0;
         this.name="Unknown";
@@ -32,10 +41,10 @@ class Employee{
 public class employee_management {
     public static void main(String[] args){
         Scanner scanner=new Scanner(System.in);
-        Employee employee1=new Employee(001,"Mark");
-        Employee employee2=new Employee(002,"Jane");
-        Employee employee3=new Employee(003,"Steven");
-        Employee employee4=new Employee();
+        Employee employee1 = new Employee(001, "Mark",   30, "Manager",   "HR");
+        Employee employee2 = new Employee(002, "Jane",   25, "Developer", "IT");
+        Employee employee3 = new Employee(003, "Steven", 28, "Designer",  "UI");
+        Employee employee4 = new Employee(); // 默认空对象
         int choice=0;
         while(choice!=3){                                                       //隐含 在此界面内输入3自动关闭系统判断
             System.out.println("-------雇员管理系统主页面------");
@@ -46,7 +55,7 @@ public class employee_management {
             choice=scanner.nextInt();                                            //每次重新判断choice，防止在某一个功能中死循环
             switch(choice){
                 case 1:
-                    System.out.println("请依次输入签到人名字：");
+                    System.out.println("请依次输入签到人名字，输入0结束签到：");
                     String c=scanner.nextLine();
                     while(!(c=scanner.nextLine()).equals("0")){                     //判断输入是否为结束符号，并接收第一个名字
                         if((c.equals("Mark"))||(c.equals("Jane"))||(c.equals("Steven"))){
